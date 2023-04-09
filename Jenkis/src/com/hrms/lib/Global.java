@@ -17,4 +17,11 @@ public class Global {
 	public String btn_login = "Submit";
 	public String link_logout = "Logout";
 
+	
+	//Add New EMp
+	public String frame_enter = "rightMenu";
+	public String btn_add = "//*[@id=\"standardView\"]/div[3]/div[1]/input[1]";
+	public String emp_Lastname= "txtEmpLastName";
+	public String emp_FirstName = "txtEmpFirstName";
+	public String btn_save = "btnEdit";
 }

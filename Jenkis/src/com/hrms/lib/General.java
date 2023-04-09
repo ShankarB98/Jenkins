@@ -26,4 +26,26 @@ public class General  extends Global
 	  driver.findElement(By.name(btn_login)).click();
 	  System.out.println("Login Application");
   }
+	  public void enterFrame()
+	  {
+		 driver.switchTo().frame(frame_enter);
+		  System.out.println("Entered into the frame");	
+		 
+	  }
+	  
+	  public void exitFrame()
+	  {
+		  driver.switchTo().defaultContent();
+		  System.out.println("Exit into frame");
+	  }
+	  public void addNewEmp()
+	  {
+		  driver.findElement(By.xpath(btn_add)).click();
+		  driver.findElement(By.name(emp_Lastname)).sendKeys("Shankar");
+		  driver.findElement(By.name(emp_FirstName)).sendKeys("Bhosle");
+		  driver.findElement(By.id(btn_save)).click();
+		  System.out.println("Add L new Emp");
+	  }
+ 
+  
 }
