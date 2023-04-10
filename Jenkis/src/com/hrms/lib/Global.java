@@ -24,4 +24,11 @@ public class Global {
 	public String emp_Lastname= "txtEmpLastName";
 	public String emp_FirstName = "txtEmpFirstName";
 	public String btn_save = "btnEdit";
+	
+	//Search EMp & delete Emp
+	public String pim = "PIM";
+	public String srch_bar = "loc_code";
+	public String serarch ="loc_name";
+	public String btn_search = "//input[@type= 'button'][@class= 'plainbtn']"; 
+	public String btn_delete = "//imput[@type = 'button'][@value = 'Delete']";
 }
