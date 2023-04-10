@@ -57,7 +57,7 @@ public class General  extends Global
 	  {
 		  driver.switchTo().frame(0);
 		  Actions ac= new Actions(driver);
-		 ac.moveToElement(driver.findElement(By.linkText(pim))).perform();
+		 ac.moveToElement(driver.findElement(By.linkText(pim))).build().perform();
 		//  driver.findElement(By.linkText("Employee List")).sendKeys("Employee List");;
 		  driver.findElement(By.linkText("Employee List")).click();
 		  driver.switchTo().defaultContent();
