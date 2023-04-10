@@ -1,7 +1,7 @@
 package com.hrms.testscripts;
 
 
-import com.hrms.lib.*;
+import com.hrms.lib.General ;
 public class TC002 
 {
 	public static void main(String[] args) throws Exception {

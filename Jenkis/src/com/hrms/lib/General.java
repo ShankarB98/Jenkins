@@ -1,5 +1,7 @@
 package com.hrms.lib;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,6 +26,7 @@ public class General  extends Global
   public void login() throws Exception
   {
 	  driver.findElement(By.name(txt_login)).sendKeys(un);
+	  driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 	  driver.findElement(By.name(txt_pass)).sendKeys(pw);
 	  driver.findElement(By.name(btn_login)).click();
 	  System.out.println("Login Application");
@@ -40,25 +43,24 @@ public class General  extends Global
 		  driver.switchTo().defaultContent();
 		  System.out.println("Exit into frame");
 	  }
-	  public void addNewEmp() throws Exception
+	  public void addNewEmp()
 	  {
 		  driver.findElement(By.xpath(btn_add)).click();
-		  Thread.sleep(1000);
+		  driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		  driver.findElement(By.name(emp_Lastname)).sendKeys("Shankar");
-		  Thread.sleep(1000);
+		  driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		  driver.findElement(By.name(emp_FirstName)).sendKeys("Bhosle");
-		  Thread.sleep(1000);
+		  driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		  driver.findElement(By.id(btn_save)).click();
 		  System.out.println("Add  new Emp");
-		  Thread.sleep(1000);
+		  driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 	  }
 	  
 	  public void searchEmp() throws Exception
 	  {
 		  driver.switchTo().frame(0);
 		  Actions ac= new Actions(driver);
-		 ac.moveToElement(driver.findElement(By.linkText(pim))).build().perform();
-		//  driver.findElement(By.linkText("Employee List")).sendKeys("Employee List");;
+		  ac.moveToElement(driver.findElement(By.linkText(pim))).perform();
 		  driver.findElement(By.linkText("Employee List")).click();
 		  driver.switchTo().defaultContent();
 		  System.out.println("click on emp list");
