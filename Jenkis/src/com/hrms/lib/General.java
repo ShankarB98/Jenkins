@@ -58,12 +58,8 @@ public class General  extends Global
 	  
 	  public void searchEmp() throws Exception
 	  {
-		  driver.switchTo().frame(0);
-		  Actions ac= new Actions(driver);
-		  ac.moveToElement(driver.findElement(By.linkText(pim))).perform();
-		  driver.findElement(By.linkText("Employee List")).click();
-		  driver.switchTo().defaultContent();
-		  System.out.println("click on emp list");
+		 
+		 
 		  Select sc = new Select(driver.findElement(By.id(srch_bar)));
 		  sc.selectByValue("1");
 		  Thread.sleep(2000);
